@@ -1,5 +1,6 @@
 body{
-
+  margin:0;
+  padding:0;
 }
 header{
 
@@ -8,11 +9,15 @@ header{
 
 }
 
+.logo a{
+
+}
+
 p{
 
 }
 figure{
-    margin: auto 0;
+    margin: 21px 0;
     position: relative;
     overflow: hidden;
 }
@@ -37,6 +42,26 @@ main{
 section{
    
 }
+
+.image-on-left{
+
+}
+
+.image-on-left img{
+  float:left;
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  margin-right:10px;
+  margin-bottom:10px;
+}
+
+footer{
+  background-color: #3c3c3c;
+  color:white;
+}
+
 /* HERO Homepage */
 .hero-homepage{
     height: 30vh;
@@ -53,9 +78,11 @@ section{
 /* NOTE START Mobile Navigation styles ------------- */
 .nav-grid{
     display: grid;
-    min-height: 60px;
+    padding:5px;
+    /* min-height: 60px; */
     /* This could affect the amount of clickable space for users to toggle on the drop down menu. The larger the number then larger thumbs won't have a problem hiting this button */
     grid-auto-flow: column;
+    align-items:center;
 }
 /* Navigation bar styles */
 .mainNav {
@@ -63,7 +90,7 @@ section{
   /* Change bar color */
   color:#ffffff;
   /* Text color - For hamburger and company name*/
-  height: 55px;
+  /* height: 55px; */
   /* How tall the nav bar is -
   NOTE This number needs to be in sync with the top number for .mainnav .menu below */
   position: relative;
@@ -71,7 +98,7 @@ section{
 /* Navigation links styles */
 nav a{
   display: block;
-  padding:20px;
+  /* padding:20px 0 20px 0; */
   text-decoration: none;
   color: #fff;
   /* NOTE LINK color for company name*/
@@ -107,7 +134,7 @@ nav a{
   padding: 15px;
 }
 .mainNav .menu a:hover {
-  background: #292938;
+  /* background: #292938; */
   /* NOTE Background color when hovering over links */
   color: #efefef;
   /* Color of text when hovering over link */
@@ -135,13 +162,28 @@ nav a{
   display: block;
 }
 .navcontainer {
-  max-width: 960px;
+  max-width: 90%;
   margin: 0 auto;
   padding: 10px;
 }
 /* END MOBILE NAVIGATION STYLES */
 
-
+/* START FOOTER STYLES--------- */
+footer{
+  padding-top:30px;
+  padding-bottom:30px;
+}
+.footer-wrapper{
+  width:90%;
+  margin:auto;
+}
+footer .fa{
+  color:white;
+  text-decoration: none;
+  font-size: 20px;
+  padding-right: 20px;
+}
+/* END FOOTER STYLES----------- */
 
 
 @media only screen and (min-width:600px){
@@ -161,5 +203,54 @@ nav a{
     /* HERO Contact page */
 
 
+
+}/* End Larger Screen Styles */
+
+@media only screen and (min-width:1000px){
+
+  /* NOTE START Nav styles for medium and larger screens-----
+  Do not change nav styles below without help. */
+    .navcontainer{
+      display: grid;
+      min-height: 70px;
+      grid-auto-flow: column;
+      padding-top: 0;
+      padding-bottom: 0;
+      max-width:900px;
+  /*  You can change the max-width. This counter acts the styles above media query so the links could be all the way to the left */
+    }
+    .mainNav {
+      overflow: hidden;
+    }
+    .mainNav .navBars {
+      display: none;
+    }
+    #logo{
+        padding-top:10px;
+    }
+    #logo a{
+
+    }
+    .mainNav .menu {
+      display: block;
+      box-shadow: none;
+      border: none;
+      float: right;
+      /* float:left; */
+      /* NOTE LINKS POSITION to the left*/
+      /* text-align: center; */
+      /* NOTE LINKS POSITION center*/
+      text-align: right;
+      /* NOTE LINKS POSITION to the right*/
+      position: static;
+    }
+    .mainNav .menu li {
+      display: inline-block;
+    }
+    .mainNav .menu a {
+      border: none;
+      padding: 20px 10px;
+    }
+/* END nav styles ---------------------------- */
 
 }/* End Larger Screen Styles */
